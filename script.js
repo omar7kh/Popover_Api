@@ -46,4 +46,21 @@ const handlePopoverPosition = (toggleButton, popover) => {
   });
 };
 
+const popoverPositionEvents = () => {
+  popovers.forEach((popover, index) => {
+    popover.addEventListener('toggle', (event) => {
+      if (event.newState === 'open') {
+        handlePopoverPosition(toggleButtons[index], popover);
+      }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    popovers.forEach((popover, index) =>
+      handlePopoverPosition(toggleButtons[index], popover)
+    );
+  });
+};
+
 configurePopovers();
+popoverPositionEvents();

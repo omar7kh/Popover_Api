@@ -1,0 +1,41 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.toggleButton {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(92deg, #455EB5, #5643CC, #673FD7);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    user-select: none;
+    transition: all .5s;
+}
+
+.toggleButton:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+.popover {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    border: 1px solid #111;
+    margin: unset;
+    inset: unset;
+}

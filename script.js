@@ -24,7 +24,6 @@ const popoverSupported = supportsPopover();
 const configurePopovers = () => {
   if (popoverSupported) {
     popovers.forEach((popover, i) => {
-      popover.popover = 'auto';
       toggleButtons[i].popoverTargetElement = popover;
       toggleButtons[i].addEventListener = 'toggle';
     });
